@@ -1,0 +1,139 @@
+/* Gaya Utama */
+.login-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container Login */
+.login-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Judul */
+.login-title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #34495e;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.sub-subtitle {
+    color: #7f8c8d;
+    font-size: 16px;
+    margin: 5px 0 20px;
+}
+
+/* Form Login */
+.login-instruction {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.login-form {
+    margin: 25px 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Status Verifikasi */
+.verifying-status {
+    color: #3498db;
+    font-style: italic;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Garis Pemisah */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 20px 0;
+}
+
+/* Branding */
+.brand-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.brand-tagline {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Sistem Informasi */
+.system-info {
+    margin: 20px 0;
+}
+
+.system-title {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Footer */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+}

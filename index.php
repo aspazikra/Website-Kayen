@@ -30,10 +30,10 @@
               <a href="IndexBerita.php" class="nav-link text-white px-3">Berita</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-white px-3">Kontak</a>
+              <a href="kontak.php" class="nav-link text-white px-3">Kontak</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-white px-3">Admin</a>
+              <a href="loginadmin.php   " class="nav-link text-white px-3">Admin</a>
             </li>
           </ul>
         </nav>
