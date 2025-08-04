@@ -8,39 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="bg-dark text-white py-3">
-      <div class="container d-flex flex-wrap align-items-center justify-content-between">
-        
-        <!-- Logo dan Nama Desa -->
-        <div class="d-flex align-items-center">
-          <img src="image/LogoPacitan.png" width="75" height="60" class="me-3" alt="Logo Pacitan">
-          <h1 class="h4 mb-0 fw-bold">Desa Kayen</h1>
-        </div>
-
-        <!-- Navigasi -->
-        <nav>
-          <ul class="nav text-small">
-            <li class="nav-item">
-              <a href="index.php" class="nav-link text-white px-3">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="profiledesa.php" class="nav-link text-white px-3">Profil Desa</a>
-            </li>
-            <li class="nav-item">
-              <a href="IndexBerita.php" class="nav-link text-white px-3">Berita</a>
-            </li>
-            <li class="nav-item">
-              <a href="kontak.php" class="nav-link text-white px-3">Kontak</a>
-            </li>
-            <li class="nav-item">
-              <a href="loginadmin.php   " class="nav-link text-white px-3">Admin</a>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-    </header>
-
+    <?php include 'header.php'; ?>
+    
   <main class="container">
     <!-- berita terkini -->
     <div class="news-container">
@@ -208,45 +177,7 @@
     </div>
 </main>
 
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3 class="footer-title">Desa Kayen</h3>
-            <p class="footer-description">Desa Kayen, Kecamatan Kayen, Kabupaten Pacitan, Jawa Timur</p>
-            <div class="footer-social">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Tautan Cepat</h3>
-            <ul class="footer-links">
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Profil Desa</a></li>
-                <li><a href="#">Berita</a></li>
-                <li><a href="#">Galeri</a></li>
-                <li><a href="#">Kontak</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h3 class="footer-title">Kontak Kami</h3>
-            <ul class="footer-contact">
-                <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Kayen No. 123</li>
-                <li><i class="fas fa-phone"></i> (0357) 1234567</li>
-                <li><i class="fas fa-envelope"></i> info@desakayen.id</li>
-                <li><i class="fas fa-clock"></i> Senin-Jumat: 08.00 - 16.00 WIB</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2023 Desa Kayen. All rights reserved.</p>
-    </div>
-</footer>
+        <?php include 'footer.php'; ?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

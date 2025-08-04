@@ -7,9 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/berita.css?php echo time(); ?>">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="jsBerita" href="js/script.js">
 </head>
 <body>
+<?php include 'header.php'; ?>
     <main class="container">
     <!-- pengumuman -->
     <section class="news-section">
@@ -398,8 +400,8 @@
                 </div>
             </div>
     </div>
-
     </main>
+ <?php include 'footer.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

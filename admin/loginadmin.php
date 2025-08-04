@@ -6,8 +6,8 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/loginadmin.css?php echo time(); ?>">
-    <link rel="jsBerita" href="js/script.js">
+    <link rel="stylesheet" href="../css/loginadmin.css?php echo time(); ?>">
+    <link rel="jsBeri   ta" href="js/script.js">
 </head>
 <body>
     <div class="login-page">
