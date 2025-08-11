@@ -21,37 +21,54 @@
       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBerita">Tambah Berita</button>
     </div>
 
-    <table class="table table-bordered table-hover">
-      <thead class="table-info">
-        <tr>
-          <th>No</th>
-          <th>Judul</th>
-          <th>Tanggal</th>
-          <th>Status</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Pembangunan Jalan Baru</td>
-          <td>2025-07-28</td>
-          <td>Aktif</td>
-          <td>
-            <button class="btn btn-sm btn-warning">Edit</button>
-            <button class="btn btn-sm btn-danger">Hapus</button>
-          </td>
-        </tr>
-        <!-- Tambahkan berita lainnya -->
-      </tbody>
-    </table>
+<table class="table table-bordered table-hover">
+  <thead class="table-info">
+    <tr>
+      <th>No</th>
+      <th>Judul</th>
+      <th>Tanggal</th>
+      <th>Kategori</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    include '../database/koneksi.php';
+    
+    $sql = "SELECT * FROM berita ORDER BY tanggal_publish DESC";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        $no = 1;
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>".$no."</td>
+                    <td>".htmlspecialchars($row['judul'])."</td>
+                    <td>".$row['tanggal_publish']."</td>
+                    <td>".htmlspecialchars($row['kategori'])."</td>
+                    <td>
+                      <a href='edit_berita.php?id=".$row['id']."' class='btn btn-sm btn-warning'>Edit</a>
+                      <a href='hapus_berita.php?id=".$row['id']."' class='btn btn-sm btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'>Hapus</a>
+                    </td>
+                  </tr>";
+            $no++;
+        }
+    } else {
+        echo "<tr><td colspan='5' class='text-center'>Tidak ada data berita</td></tr>";
+    }
+    
+    $conn->close();
+    ?>
+  </tbody>
+</table>
+
   </div>
 
   <!-- Modal Tambah Berita -->
   <div class="modal fade" id="modalBerita" tabindex="-1" aria-labelledby="modalBeritaLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <form>
+        <form action="proses_tambah_berita.php" method="POST" enctype="multipart/form-data">
           <div class="modal-header">
             <h5 class="modal-title" id="modalBeritaLabel">Tambah Berita Desa</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
@@ -59,26 +76,30 @@
           <div class="modal-body">
             <div class="mb-3">
               <label class="form-label">Judul Berita</label>
-              <input type="text" class="form-control" required>
+              <input type="text" class="form-control" name="judul" required>
             </div>
             <div class="mb-3">
               <label class="form-label">Isi Berita</label>
-              <textarea class="form-control" rows="5" required></textarea>
+              <textarea class="form-control" name="isi" rows="5" required></textarea>
             </div>
             <div class="mb-3">
               <label class="form-label">Gambar Utama</label>
-              <input type="file" class="form-control">
+              <input type="file" class="form-control" name="gambar">
             </div>
             <div class="mb-3">
               <label class="form-label">Tanggal Posting</label>
-              <input type="date" class="form-control">
+              <input type="date" class="form-control" name="tanggal_publish">
             </div>
             <div class="mb-3">
-              <label class="form-label">Status</label>
-              <select class="form-select">
-                <option>Aktif</option>
-                <option>Draft</option>
+              <label class="form-label">Kategori</label>
+              <select class="form-select" name="kategori" required>
+                <option value="berita">Berita</option>
+                <option value="pengumuman">Pengumuman</option>
               </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Penulis</label>
+              <input type="text" class="form-control" name="penulis" required>
             </div>
           </div>
           <div class="modal-footer">
@@ -89,6 +110,7 @@
       </div>
     </div>
   </div>
+
   </main>
   </div>
   </div>

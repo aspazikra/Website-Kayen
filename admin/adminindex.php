@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin - Desa Borobudur</title>
+    <title>Dashboard Admin - Desa Kayen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -17,7 +17,7 @@
         <!-- Main Content -->
         <main class="col-md-9 ms-sm-auto col-lg-10 content">
             <h2>Selamat Datang, Admin!</h2>
-            <p>Ini adalah halaman dashboard sistem informasi Desa Borobudur.</p>
+            <p>Ini adalah halaman dashboard sistem informasi Desa Kayen.</p>
 
             <div class="row">
                 <div class="col-md-4">

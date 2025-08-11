@@ -388,3 +388,88 @@
         text-align: center;
     }
 }
+
+/* Struktur utama */
+.tujuan-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.tujuan-section .left {
+  flex: 1;
+  min-width: 500px;
+}
+
+.tujuan-section .right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.tujuan-section .right img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Judul */
+.subtitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+/* Accordion-style boxes */
+.accordion-box {
+  background: #1976f2;
+  color: white;
+  border-left: 10px solid #0d47a1;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.accordion-box strong {
+  font-size: 16px;
+  display: block;
+}
+
+.accordion-header span {
+  margin-right: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.accordion-box.active {
+  background-color: #e3f2fd;
+  color: #333;
+}
+
+.accordion-box.active .accordion-header span {
+  transform: rotate(180deg);
+  color: #0d47a1;
+}
+
+.accordion-box .accordion-content {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.accordion-box .accordion-content ol {
+  margin-left: 20px;
+}
+
+.accordion-box .accordion-content li {
+  margin-bottom: 10px;
+}
+

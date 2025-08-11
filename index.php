@@ -5,12 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beranda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?php echo time(); ?>">
   </head>
   <body>
     <?php include 'header.php'; ?>
     
   <main class="container">
+    <!--tujuan dan sasaran -->
+    <!-- <section id="tujuan-sasaran" class="tujuan-section">
+  <div class="container">
+    <div class="row">
+      Kiri: Konten
+      <div class="left">
+        <h2 class="subtitle">Tujuan dan Sasaran</h2>
+        <h1 class="title">Rencana Pembangunan Daerah<br>Kabupaten Pacitan 2024–2026</h1>
+
+        <div class="accordion-box active">
+          <div class="accordion-header">
+            <span>&#x25B2;</span>
+            <strong>Mewujudkan Percepatan Pemerataan Pembangunan Infrastruktur dan Pembangunan Wilayah Perbatasan dengan tetap Memperhatikan Kualitas Lingkungan Hidup</strong>
+          </div>
+          <div class="accordion-content">
+            <ol>
+              <li>Pemerataan Pembangunan Infrastruktur Penunjang Perekonomian dan aksesibilitas.</li>
+              <li>Pengarusutamaan Pembangunan Berwawasan Lingkungan.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="accordion-box">
+          <div class="accordion-header">
+            <span>&#x25BC;</span>
+            <strong>Mewujudkan Pembangunan dan Peningkatan Daya Saing SDM yang Kukuh Berpijak Pada Nilai-Nilai Agama dan Budaya Bangsa</strong>
+          </div>
+        </div>
+
+        <div class="accordion-box">
+          <div class="accordion-header">
+            <span>&#x25BC;</span>
+            <strong>Meningkatkan Pertumbuhan Ekonomi melalui Sektor Agraris, Sektor Pariwisata, serta Sektor Unggulan Lainnya</strong>
+          </div>
+        </div>
+
+        <div class="accordion-box">
+          <div class="accordion-header">
+            <span>&#x25BC;</span>
+            <strong>Menciptakan Birokrasi Pemerintah yang Inovatif, Profesional, dan Melayani</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+    
     <!-- berita terkini -->
     <div class="news-container">
         <div class="news-header">
