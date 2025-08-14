@@ -12,9 +12,9 @@
 <body>
     <div class="login-page">
     <div class="login-container">
-        <h1 class="login-title">Login</h1>
-        <h2 class="subtitle">DESA BOROBUDUR - KECAMATAN</h2>
-        <h3 class="sub-subtitle">BOROBUDUR</h3>
+        <h1 class="login-title">Login Admin</h1>
+        <h2 class="subtitle">Desa Kayen - Kecamatan Pacitan</h2>
+        <h3 class="sub-subtitle">Kayen</h3>
         
         <p class="login-instruction">Silahkan Masukkan username & password untuk login</p>
         
@@ -41,8 +41,8 @@
         
         <div class="system-info">
             <div class="system-title">Sistem Informasi Desa</div>
-            <h3 class="sub-subtitle">DESA BOROBUDUR</h3>
-            <h4 class="sub-subtitle">KECAMATAN BOROBUDUR</h4>
+            <h3 class="sub-subtitle">Desa Kayen</h3>
+            <h4 class="sub-subtitle"> Kecamatan Pacitan</h4>
         </div>
         </div>
         </div>

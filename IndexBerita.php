@@ -1,407 +1,117 @@
+<?php
+include 'database/koneksi.php';
+
+// Ambil berita (kategori berita)
+$sqlBerita = "SELECT * FROM berita WHERE kategori = 'berita' AND status = 1 ORDER BY tanggal_publish DESC";
+$resultBerita = $conn->query($sqlBerita);
+
+// Ambil pengumuman (kategori pengumuman)
+$sqlPengumuman = "SELECT * FROM berita WHERE kategori = 'pengumuman' AND status = 1 ORDER BY tanggal_publish DESC";
+$resultPengumuman = $conn->query($sqlPengumuman);
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Berita & Pengumuman Desa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/berita.css?php echo time(); ?>">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="jsBerita" href="js/script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/berita.css">
+    <link rel="stylesheet" href="css/footer.css?v=<?php echo time(); ?>">
+
 </head>
 <body>
+
 <?php include 'header.php'; ?>
-    <main class="container">
-    <!-- pengumuman -->
-    <section class="news-section">
-        <h2 class="section-title">
-            <i class="bi bi-megaphone"></i> Pengumuman Terkini
-            <a href="#" class="view-all">Lihat Semua <i class="bi bi-arrow-right"></i></a>
-        </h2>
-        <div class="row newspaper-x-layout-b-row">
-            <!-- Your pengumuman content here (same as before) -->
-        </div>
-    </section>
-    <div class="row newspaper-x-layout-b-row">
-        <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_01-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
 
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_02-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">Maecenas elit ligula, placerat elementum</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_03-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/02_events_article_06-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">In odio sapien, at uta, accumsan ut dolor…</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">...</a>                    </div>
-                </div>
-            </div>
+<div class="container news-section">
+    <!-- Bagian Berita Desa -->
+    <div class="section-title">
+        <span><i class="fas fa-newspaper"></i> Daftar Berita Desa</span>
     </div>
-
-    <!-- Berita -->'
-    <section class="news-section">
-        <h2 class="section-title">
-            <i class="bi bi-newspaper"></i> Berita Utama
-            <a href="#" class="view-all">Lihat Semua <i class="bi bi-arrow-right"></i></a>
-        </h2>
-        <div class="row newspaper-x-layout-b-row">
-            <!-- Your berita content here (same as before) -->
-        </div>
-    </section>
-     <div class="row newspaper-x-layout-b-row">
-        <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_01-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
+    <div class="newspaper-x-layout-b-row">
+        <div class="row justify-content-start">
+        <?php if ($resultBerita->num_rows > 0): ?>
+            <?php while ($row = $resultBerita->fetch_assoc()): ?>
+                <div class="col-md-3">
+                    <div class="newspaper-x-blog-post-layout-b">
+                        <div class="newspaper-x-image">
+                            <?php if (!empty($row['gambar'])): ?>
+                                <img src="image/berita/<?= htmlspecialchars($row['gambar']); ?>" alt="<?= htmlspecialchars($row['judul']); ?>">
+                            <?php else: ?>
+                                <img src="image/berita/default.jpg" alt="Gambar default">
+                            <?php endif; ?>
+                        </div>
+                        <div class="newspaper-x-title">
+                            <h4>
+                                <a href="detail_berita.php?id=<?= $row['id']; ?>">
+                                    <?= htmlspecialchars($row['judul']); ?>
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="newspaper-x-date">
+                            <i class="far fa-calendar-alt"></i> <?= date('d M Y', strtotime($row['tanggal_publish'])); ?>
+                        </div>
+                        <div class="newspaper-x-content">
+                            <?= substr(strip_tags($row['isi']), 0, 100); ?>...
+                        </div>
                     </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">...</a>                    </div>
                 </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_02-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">Maecenas elit ligula, placerat elementum</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_03-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/02_events_article_06-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">In odio sapien, at uta, accumsan ut dolor…</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">...</a>                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p class="text-center">Belum ada berita.</p>
+        <?php endif; ?>
     </div>
-
-    <!-- Kesehatan -->
-    <section class="news-section">
-        <h2 class="section-title">
-            <i class="bi bi-heart-pulse"></i> Kesehatan
-            <a href="#" class="view-all">Lihat Semua <i class="bi bi-arrow-right"></i></a>
-        </h2>
-        <div class="row newspaper-x-layout-b-row">
-            <!-- Your kesehatan content here (same as before) -->
-        </div>
-    </section>
-    <div class="row newspaper-x-layout-b-row">
-        <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_01-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_02-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">Maecenas elit ligula, placerat elementum</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_03-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/02_events_article_06-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">In odio sapien, at uta, accumsan ut dolor…</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">...</a>                    </div>
-                </div>
-            </div>
     </div>
+</div>
 
-    <!-- UMKM -->
-    <section class="news-section">
-        <h2 class="section-title">
-            <i class="bi bi-shop"></i> UMKM Lokal
-            <a href="#" class="view-all">Lihat Semua <i class="bi bi-arrow-right"></i></a>
-        </h2>
-        <div class="row newspaper-x-layout-b-row">
-            <!-- Your UMKM content here (same as before) -->
-        </div>
-    </section>
-    <div class="row newspaper-x-layout-b-row">
-        <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_01-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/aliquet-lorem-pantum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_02-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">Maecenas elit ligula, placerat elementum</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-elit-ligula-placerat-elementum/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/03_editorial_article_03-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">Maecenas tincidunt posuere quam, eu atimu</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/maecenas-tincidunt-posuere-quam-eu-atimu/">...</a>                    </div>
-                </div>
-            </div>
-                                <div class="col-md-3 col-xs-6">
-                <div class="newspaper-x-blog-post-layout-b">
-                    <div class="newspaper-x-image">
-                        <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">
-                            <img width="550" height="360" src="https://colorlibhub.com/newspaper-x/wp-content/uploads/sites/62/2017/05/02_events_article_06-550x360.jpg" class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="">                        </a>
-                    </div>
-                    <div class="newspaper-x-title">
-                        <h4>
-                            <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">In odio sapien, at uta, accumsan ut dolor…</a>
-                        </h4>
-                    </div>
-
-                                            <span class="newspaper-x-author">
-                            <a href="/author/raibercristian ">raibercristian</a> 
-                        </span>
-                        <span class="newspaper-x-date">May 10, 2017</span>
-                    
-                    <div class="newspaper-x-content">
-                        Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.Lorem <a href="https://colorlibhub.com/newspaper-x/2017/05/10/odio-sapien-uta-accumsan-ut-dolor-vel/">...</a>                    </div>
-                </div>
-            </div>
+<div class="container news-section">
+    <!-- Bagian Pengumuman Desa -->
+    <div class="section-title">
+        <span><i class="fas fa-bullhorn"></i> Pengumuman Desa</span>
     </div>
-    </main>
- <?php include 'footer.php'; ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <div class="newspaper-x-layout-b-row">
+            <div class="row justify-content-start">
+        <?php if ($resultPengumuman->num_rows > 0): ?>
+            <?php while ($row = $resultPengumuman->fetch_assoc()): ?>
+                <div class="col-md-3">
+                    <div class="newspaper-x-blog-post-layout-b">
+                        <div class="newspaper-x-image">
+                            <?php if (!empty($row['gambar'])): ?>
+                                <img src="image/berita/<?= htmlspecialchars($row['gambar']); ?>" alt="<?= htmlspecialchars($row['judul']); ?>">
+                            <?php else: ?>
+                                <img src="image/berita/default.jpg" alt="Gambar default">
+                            <?php endif; ?>
+                        </div>
+                        <div class="newspaper-x-title">
+                            <h4>
+                                <a href="detail_berita.php?id=<?= $row['id']; ?>">
+                                    <?= htmlspecialchars($row['judul']); ?>
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="newspaper-x-date">
+                            <i class="far fa-calendar-alt"></i> <?= date('d M Y', strtotime($row['tanggal_publish'])); ?>
+                        </div>
+                        <div class="newspaper-x-content">
+                            <?= substr(strip_tags($row['isi']), 0, 100); ?>...
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p class="text-center">Belum ada pengumuman.</p>
+        <?php endif; ?>
+    </div>
+    </div>
+</div>
+
+<?php include 'footer.php'; ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php $conn->close(); ?>
