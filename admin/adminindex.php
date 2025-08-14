@@ -1,3 +1,22 @@
+<?php
+include 'cek_login.php';
+include '../database/koneksi.php';
+
+// Hitung jumlah berita
+$result_berita = $conn->query("SELECT COUNT(*) AS total FROM berita");
+$total_berita = $result_berita->fetch_assoc()['total'];
+
+// Hitung jumlah UMKM
+$result_umkm = $conn->query("SELECT COUNT(*) AS total FROM umkm_desa");
+$total_umkm = $result_umkm->fetch_assoc()['total'];
+
+// Hitung jumlah dokumen
+$result_dokumen = $conn->query("SELECT COUNT(*) AS total FROM dokumen_desa");
+$total_dokumen = $result_dokumen->fetch_assoc()['total'];
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -16,31 +35,31 @@
         <?php include 'sidebar.php'; ?>
         <!-- Main Content -->
         <main class="col-md-9 ms-sm-auto col-lg-10 content">
-            <h2>Selamat Datang, Admin!</h2>
+            <h2>Selamat Datang, <?php echo $_SESSION['admin_nama']; ?>!</h2>
             <p>Ini adalah halaman dashboard sistem informasi Desa Kayen.</p>
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card text-bg-primary mb-3">
+                    <div class="card text-bg-success mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Jumlah Penduduk</h5>
-                            <p class="card-text">1.234 Jiwa</p>
+                            <h5 class="card-title">Berita dan Pengumuman Terbit</h5>
+                            <p class="card-text"><?php echo $total_berita; ?> Artikel</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card text-bg-success mb-3">
+                    <div class="card text-bg-info mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Berita Terbit</h5>
-                            <p class="card-text">12 Artikel</p>
+                            <h5 class="card-title">UMKM Terdaftar</h5>
+                            <p class="card-text"><?php echo $total_umkm; ?> UMKM</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card text-bg-warning mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Permintaan Surat</h5>
-                            <p class="card-text">5 Permintaan</p>
+                            <h5 class="card-title">Dokumen Desa</h5>
+                            <p class="card-text"><?php echo $total_dokumen; ?> Dokumen</p>
                         </div>
                     </div>
                 </div>

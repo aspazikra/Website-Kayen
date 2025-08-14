@@ -1,3 +1,5 @@
+<?php include 'cek_login.php'; ?>
+
 <?php
 include '../database/koneksi.php';
 

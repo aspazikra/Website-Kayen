@@ -20,7 +20,18 @@ $resultPengumuman = $conn->query($sqlPengumuman);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/berita.css">
     <link rel="stylesheet" href="css/footer.css?v=<?php echo time(); ?>">
-
+    <style>
+        /* Tambahkan style untuk ikon biru */
+        .text-primary i {
+            color: #0d6efd; 
+        }
+        .newspaper-x-date i {
+            color: #0d6efd; 
+        }
+        .btn-primary i {
+            color: white; 
+        }
+    </style>
 </head>
 <body>
 
@@ -29,7 +40,7 @@ $resultPengumuman = $conn->query($sqlPengumuman);
 <div class="container news-section">
     <!-- Bagian Berita Desa -->
     <div class="section-title">
-        <span><i class="fas fa-newspaper"></i> Daftar Berita Desa</span>
+        <span class="text-primary"><i class="fas fa-newspaper" style="color: #0d6efd;"></i> Daftar Berita Desa</span>
     </div>
     <div class="newspaper-x-layout-b-row">
         <div class="row justify-content-start">
@@ -51,12 +62,15 @@ $resultPengumuman = $conn->query($sqlPengumuman);
                                 </a>
                             </h4>
                         </div>
-                        <div class="newspaper-x-date">
-                            <i class="far fa-calendar-alt"></i> <?= date('d M Y', strtotime($row['tanggal_publish'])); ?>
+                        <div class="newspaper-x-date text-muted">
+                            <i class="far fa-calendar-alt" style="color: #0d6efd;"></i> <?= date('d M Y', strtotime($row['tanggal_publish'])); ?>
                         </div>
                         <div class="newspaper-x-content">
                             <?= substr(strip_tags($row['isi']), 0, 100); ?>...
                         </div>
+                        <a href="detail_berita.php?id=<?= $row['id']; ?>" class="btn btn-sm btn-primary mt-2">
+                            Detail Selengkapnya <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             <?php endwhile; ?>
@@ -70,10 +84,10 @@ $resultPengumuman = $conn->query($sqlPengumuman);
 <div class="container news-section">
     <!-- Bagian Pengumuman Desa -->
     <div class="section-title">
-        <span><i class="fas fa-bullhorn"></i> Pengumuman Desa</span>
+        <span class="text-primary"><i class="fas fa-bullhorn" style="color: #0d6efd;"></i> Pengumuman Desa</span>
     </div>
     <div class="newspaper-x-layout-b-row">
-            <div class="row justify-content-start">
+        <div class="row justify-content-start">
         <?php if ($resultPengumuman->num_rows > 0): ?>
             <?php while ($row = $resultPengumuman->fetch_assoc()): ?>
                 <div class="col-md-3">
@@ -87,17 +101,20 @@ $resultPengumuman = $conn->query($sqlPengumuman);
                         </div>
                         <div class="newspaper-x-title">
                             <h4>
-                                <a href="detail_berita.php?id=<?= $row['id']; ?>">
+                                <a href="detail_pengumuman.php?id=<?= $row['id']; ?>">
                                     <?= htmlspecialchars($row['judul']); ?>
                                 </a>
                             </h4>
                         </div>
-                        <div class="newspaper-x-date">
-                            <i class="far fa-calendar-alt"></i> <?= date('d M Y', strtotime($row['tanggal_publish'])); ?>
+                        <div class="newspaper-x-date text-muted">
+                            <i class="far fa-calendar-alt" style="color: #0d6efd;"></i> <?= date('d M Y', strtotime($row['tanggal_publish'])); ?>
                         </div>
                         <div class="newspaper-x-content">
                             <?= substr(strip_tags($row['isi']), 0, 100); ?>...
                         </div>
+                        <a href="detail_pengumuman.php?id=<?= $row['id']; ?>" class="btn btn-sm btn-primary mt-2">
+                            Detail Selengkapnya <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             <?php endwhile; ?>

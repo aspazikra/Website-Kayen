@@ -220,7 +220,9 @@ $result = $conn->query($sql);
         <div class="h-100 p-5 text-white bg-dark rounded-3">
           <h2>Informasi Geografis Desa</h2>
           <p>Informasi lengkap mengenai Jumlah Penduduk,Kelompok Umur, Tingkat Pendidikan, Pekerjaan, dan Status Pekerjaan  Desa Kayen.</p>
-          <button class="btn btn-outline-light" type="button">View details</button>
+          <button class="btn btn-primary btn-lg" type="button">
+            <a href="infografis.php" class="text-white text-decoration-none">Lihat Selengkapnya</a>
+          </button>
         </div>
       </div>
 
@@ -228,8 +230,10 @@ $result = $conn->query($sql);
       <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>Berita & Pengumuman</h2>
-          <p>Dapatkan berita terbaru dan pengumuman penting dari Desa Kayen.</p>
-          <button class="btn btn-outline-secondary" type="button">View details</button>
+          <p>Dapatkan berita terbaru dan pengumuman penting secara realtime dari Desa Kayen.</p>
+        <button class="btn btn-primary btn-lg" type="button">
+          <a href="indexberita.php" class="text-white text-decoration-none">Lihat Selengkapnya</a>
+        </button>
         </div>
       </div>
     </div>

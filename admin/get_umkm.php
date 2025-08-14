@@ -1,3 +1,5 @@
+<?php include 'cek_login.php'; ?>
+
 <?php
 require_once 'umkm_crud.php';
 
