@@ -27,7 +27,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
       <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #3b82f6;">
         <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Total Penduduk" style="width: 50px; height: 50px; margin-bottom: 10px;">
-        <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">1.149</h3>
+        <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">2.567</h3>
         <p style="color: #64748b;">Total Penduduk</p>
       </div>
       
@@ -152,7 +152,87 @@
 
     <?php include 'footer.php'; ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS - SUDAH ADA -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+    <!-- ========== TAMBAHKAN SCRIPT INI SETELAH BOOTSTRAP JS ========== -->
+    <script>
+    // Script untuk navbar toggle - TAMBAHKAN INI
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🔥 Initializing navbar toggle...');
+        
+        // Cek apakah Bootstrap sudah tersedia
+        if (typeof bootstrap === 'undefined') {
+            console.error('❌ Bootstrap JS tidak ditemukan!');
+            return;
+        }
+        
+        // Ambil elemen-elemen navbar
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Debug: cek apakah elemen ditemukan
+        console.log('📋 Navbar elements:', {
+            toggler: !!navbarToggler,
+            collapse: !!navbarCollapse,
+            navLinks: navLinks.length
+        });
+        
+        // Pastikan elemen navbar ada
+        if (!navbarToggler || !navbarCollapse) {
+            console.error('❌ Navbar elements tidak ditemukan!');
+            console.log('💡 Pastikan header.php memiliki:');
+            console.log('   - class="navbar-toggler" dengan data-bs-target="#navbarNav"');
+            console.log('   - id="navbarNav" pada div collapse');
+            return;
+        }
+        
+        console.log('✅ Navbar elements found, adding event listeners...');
+        
+        // Event listener untuk toggle button
+        navbarToggler.addEventListener('click', function() {
+            console.log('🔘 Toggle button clicked');
+        });
+        
+        // Auto-close navbar ketika nav-link diklik (khusus mobile)
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                console.log('🔗 Nav link clicked:', this.textContent.trim());
+                
+                // Cek apakah navbar sedang terbuka (expanded)
+                const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+                const isMobile = window.innerWidth < 992; // Bootstrap lg breakpoint
+                
+                if (isExpanded && isMobile) {
+                    console.log('📱 Mobile navbar open, closing...');
+                    
+                    try {
+                        // Tutup navbar menggunakan Bootstrap collapse
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                        console.log('✅ Navbar collapsed');
+                    } catch (error) {
+                        console.error('❌ Error closing navbar:', error);
+                    }
+                }
+            });
+        });
+        
+        // Event listeners untuk monitoring collapse events
+        navbarCollapse.addEventListener('shown.bs.collapse', function () {
+            console.log('✅ Navbar shown');
+        });
+        
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            console.log('✅ Navbar hidden');
+        });
+        
+        console.log('🎉 Navbar toggle initialized successfully!');
+    });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();

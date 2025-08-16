@@ -91,7 +91,7 @@
       <span class="arrow">▼</span>
     </div>
     <div class="card-content">
-      "Desa [Nama Desa] sebagai Desa [Visi Utama] yang mampu mengelola potensi desa dan pembangunan berkelanjutan untuk mewujudkan masyarakat yang sejahtera dan mandiri"
+      “ Terwujudnya Pengelolaan Pemerintag Desa Yang Efektif Dan Efisien Guna Menjadikan Desa Kayen Unggul, Sejahtera Dan Bermartabat ”
     </div>
   </div>
 
@@ -103,12 +103,11 @@
     </div>
     <div class="card-content">
       <ol>
-        <li>Mewujudkan tata kelola pemerintahan yang baik dan transparan</li>
-        <li>Mengembangkan kegiatan keagamaan dan sosial budaya</li>
-        <li>Meningkatkan kualitas pendidikan dan SDM</li>
-        <li>Mengembangkan teknologi informasi</li>
-        <li>Pembangunan infrastruktur yang merata dan berkelanjutan</li>
-        <li>Mengoptimalkan seluruh potensi desa</li>
+        <li>Menyelenggarakan Pemerintagan Desa Yang Kondusif, Demokratis Dan Humanis</li>
+        <li>Menyelenggarakan Pembangunan Sesuai Aspirasi Masyarakat</li>
+        <li>Mengembangkan Perekonomian Masyarakat Melalui Pemanfaatan Potensi Desa</li>
+        <li>Meningkatkan Mutu Sumber Daya Manusia Untuk Mencapai Taraf Kehidupan Yang Lebih Sejahtera.</li>
+        <li>Memfasilitasi Segala Bentuk Kegiatan Yang Positif Dan Mampu Meningkatkan Citra Desa Kayen Di Mata Masyarakat Luas</li>
       </ol>
     </div>
   </div>
@@ -119,24 +118,48 @@
       <span>Bagan Desa</span>
       <span class="arrow">▼</span>
     </div>
-    <div class="card-content">
-      <h5 class="text-center text-primary mb-3">Struktur Organisasi Pemerintahan Desa</h5>
-      <img src="https://cdn.digitaldesa.com/uploads/profil/64.02.17.2005/common/f6f6d96a1cd6ee00b0df15c9ff8a2ae1.png" class="img-fluid rounded mb-4" alt="">
-      <h5 class="text-center text-primary mb-3">Struktur Organisasi BPD</h5>
-      <img src="https://cdn.digitaldesa.com/uploads/profil/64.02.17.2005/common/f3070a5e9163d61f162d16e39d50f4e4.jpg" class="img-fluid rounded" alt="">
-    </div>
+    <div class="card-content text-center">
+    <h5 class="text-primary mb-3">Struktur Organisasi Pemerintahan Desa</h5>
+    <img src="image/Bagan Kayen.png" 
+         class="img-fluid rounded mb-4 mx-auto d-block" 
+         style="max-width: 100%; height: auto;" 
+         alt="Struktur Organisasi Desa">
+</div>
+
   </div>
 
-  <!-- Sejarah Desa -->
-  <div class="card-custom">
+<!-- Sejarah Desa -->
+<div class="card-custom">
     <div class="card-header-custom">
-      <span>Sejarah Desa</span>
-      <span class="arrow">▼</span>
+        <span>Sejarah Desa</span>
+        <span class="arrow">▼</span>
     </div>
-    <div class="card-content text-center text-muted">
-      Belum ada sejarah desa yang tersedia.
+    <div class="card-content text-muted" style="text-align: justify;">
+        <h5 class="text-center text-primary mb-3">Sejarah Desa Kayen</h5>
+
+        <h6>Gambaran Geografis dan Sejarah Awal</h6>
+        <p>Desa Kayen terletak di wilayah paling timur Kecamatan Pacitan, Kabupaten Pacitan. Secara geografis, desa ini berbatasan dengan Desa Purwoasri dan Desa Banjarjo di sebelah timur, Desa Purwoasri dan Desa Sukoharjo di sebelah selatan, Desa Mentoro dan Desa Wonogondo di sebelah utara, serta Desa Sirnoboyo dan Desa Arjowinangun di sebelah barat. Posisi strategis ini menjadikan Desa Kayen sebagai wilayah yang memiliki nilai historis penting dalam perkembangan peradaban di Pacitan.</p>
+
+        <h6>Jejak Sejarah dalam Babad Pacitan</h6>
+        <p>Meskipun nama Desa Kayen tidak tercantum dalam Babad Pacitan, wilayah ini memiliki kaitan erat dengan peristiwa bersejarah yang terjadi di dua desa tetangganya. Desa Purwoasri (dahulu bernama Jati) merupakan pusat kekuasaan Ki Ageng Buwono Keling, putra menantu Raja Majapahit yang bertugas menjadi benteng pertahanan Majapahit di wilayah Jawa bagian selatan. Sementara itu, Desa Sukoharjo (dahulu bernama Ngrejoso) dikuasai oleh Ki Ageng Petung yang mendapat mandat dari Adipati Bethara Katong untuk menyebarkan agama Islam sekaligus menghambat usaha Ki Ageng Buwono Keling dalam mempertahankan kekuasaan Majapahit.</p>
+
+        <h6>Era Konflik dan Pembentukan Wilayah</h6>
+        <p>Karena posisi Desa Kayen yang berada di antara Ngrejoso dan Jati, wilayah ini kemungkinan besar terlibat dalam konflik antara Ki Ageng Buwono Keling dan Ki Ageng Petung. Pada masa itu, wilayah Desa Kayen masih berupa hutan lebat, terbukti dari lamanya perjalanan Ki Ageng Petung dari Sukoharjo ke Jati yang memakan waktu sekitar enam jam, jauh berbeda dengan kondisi sekarang yang hanya membutuhkan waktu kurang dari setengah jam. Hal ini menunjukkan bahwa Desa Kayen memiliki usia yang lebih muda dibandingkan kedua desa tersebut.</p>
+
+        <h6>Hutan Gayam Emprit sebagai Basis Pertahanan</h6>
+        <p>Menurut cerita turun-temurun, wilayah Desa Kayen yang saat itu masih berupa hutan bernama Hutan Gayam Emprit menjadi basis pertahanan Ki Ageng Petung. Pemilihan lokasi ini sangat strategis karena jaraknya lebih dekat untuk mencapai Jati dan terpisah oleh sungai besar yang berfungsi sebagai pengaman alami dari serangan musuh. Peperangan berakhir dengan kemenangan kubu Ki Ageng Petung yang mendapat dukungan dari Syekh Maulana Maghribi di Desa Mentoro, Ki Ageng Posong di Desa Posong (Widoro), Ki Ageng Lebirah di Mentoro, serta bantuan prajurit dari Ponorogo.</p>
+
+        <h6>Asal Usul Nama dan Pembentukan Pemukiman</h6>
+        <p>Setelah perang berakhir, terjadi perkawinan antara prajurit dari Ponorogo dengan gadis-gadis dari Jati dan Ngrejoso. Meningkatnya jumlah penduduk mendorong Ki Ageng Petung untuk membuka wilayah baru di Hutan Gayam Emprit sebagai area pemukiman. Ketika daerah baru ini mulai dihuni, diadakan selamatan untuk memohon keselamatan kepada Tuhan Yang Maha Esa. Ki Ageng Petung mengharapkan agar warga dari berbagai tempat dapat mempersatukan kemauan mereka ("manunggal ing kayun" dalam bahasa Jawa) dan menjadikan desa ini tempat yang layak untuk menggantungkan kehidupan ("hayyan" dalam bahasa Arab). Dari gabungan kata "kayun" dan "hayyan" inilah kemudian terbentuk nama Desa Kayen.</p>
+
+        <h6>Perkembangan Administratif</h6>
+        <p>Sebelum menjadi satu kesatuan seperti sekarang, wilayah ini terdiri dari tiga desa terpisah, yaitu Desa Kayen, Desa Jelok, dan Desa Nogosari. Untuk menyesuaikan keadaan dan kebutuhan administratif, ketiga desa tersebut digabungkan menjadi satu dengan nama Desa Kayen. Bapak Donosari terpilih sebagai lurah (kepala desa) pertama yang berkedudukan di Desa Kayen. Dengan penggabungan ini, ketiga desa berubah status menjadi dusun, yaitu Dusun Kayen (kemudian menjadi Dusun Krajan), Dusun Nogosari, dan Dusun Jelok. Seiring perkembangan waktu, tiga dusun tersebut berkembang menjadi enam dusun dengan pembagian: Dusun Krajan membawahi Dusun Ngodong, Dusun Jelok membawahi Dusun Gundi, dan Dusun Nogosari membawahi Dusun Siwilan.</p>
+
+        <h6>Pembentukan Dusun Modern</h6>
+        <p>Dusun Siwilan merupakan dusun termuda di antara enam dusun tersebut. Awalnya, Dusun Siwilan merupakan bagian dari Desa Sirnoboyo, namun karena jarak yang jauh dari pusat pemerintahan di Dusun Ngemplak dan kedekatan dengan pusat Desa Kayen di Dusun Nogosari, warga Dusun Siwilan meminta bergabung dengan Desa Kayen. Pemerintah Desa Sirnoboyo menyetujui dengan syarat yang berpindah hanya warga dan tanah pemukiman, sementara tanah pertanian tetap menjadi bagian Desa Sirnoboyo. Pada tahun 1976, wilayah Tileng yang semula bagian dari Dusun Jelok berubah status menjadi Dusun Tileng yang berdiri sendiri karena pertimbangan geografis dan kemudahan dalam pembangunan. Saat ini, Desa Kayen terdiri dari tujuh dusun dengan sistem pemerintahan yang disesuaikan dengan kondisi masing-masing wilayah.</p>
     </div>
-  </div>
+</div>
+
 
   <!-- Informasi Desa -->
   <div class="card-custom p-3">
@@ -144,19 +167,19 @@
     <div class="info-grid">
       <div class="info-item">
         <p class="info-label">Luas Wilayah</p>
-        <p class="info-value">[XX] Km²</p>
+        <p class="info-value">362,53 Km²</p>
       </div>
       <div class="info-item">
         <p class="info-label">Jumlah Penduduk</p>
-        <p class="info-value">[XXXX] Jiwa</p>
+        <p class="info-value">2.567 Jiwa</p>
       </div>
       <div class="info-item">
         <p class="info-label">Kode Pos</p>
-        <p class="info-value">[XXXXX]</p>
+        <p class="info-value">63518</p>
       </div>
       <div class="info-item">
         <p class="info-label">Kecamatan</p>
-        <p class="info-value">[Nama Kecamatan]</p>
+        <p class="info-value">Kecamatan Pacitan</p>
       </div>
     </div>
   </div>
@@ -182,6 +205,86 @@
 </script>
 </main>
 <?php include 'footer.php'; ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS - SUDAH ADA -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+    <!-- ========== TAMBAHKAN SCRIPT INI SETELAH BOOTSTRAP JS ========== -->
+    <script>
+    // Script untuk navbar toggle - TAMBAHKAN INI
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🔥 Initializing navbar toggle...');
+        
+        // Cek apakah Bootstrap sudah tersedia
+        if (typeof bootstrap === 'undefined') {
+            console.error('❌ Bootstrap JS tidak ditemukan!');
+            return;
+        }
+        
+        // Ambil elemen-elemen navbar
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Debug: cek apakah elemen ditemukan
+        console.log('📋 Navbar elements:', {
+            toggler: !!navbarToggler,
+            collapse: !!navbarCollapse,
+            navLinks: navLinks.length
+        });
+        
+        // Pastikan elemen navbar ada
+        if (!navbarToggler || !navbarCollapse) {
+            console.error('❌ Navbar elements tidak ditemukan!');
+            console.log('💡 Pastikan header.php memiliki:');
+            console.log('   - class="navbar-toggler" dengan data-bs-target="#navbarNav"');
+            console.log('   - id="navbarNav" pada div collapse');
+            return;
+        }
+        
+        console.log('✅ Navbar elements found, adding event listeners...');
+        
+        // Event listener untuk toggle button
+        navbarToggler.addEventListener('click', function() {
+            console.log('🔘 Toggle button clicked');
+        });
+        
+        // Auto-close navbar ketika nav-link diklik (khusus mobile)
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                console.log('🔗 Nav link clicked:', this.textContent.trim());
+                
+                // Cek apakah navbar sedang terbuka (expanded)
+                const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+                const isMobile = window.innerWidth < 992; // Bootstrap lg breakpoint
+                
+                if (isExpanded && isMobile) {
+                    console.log('📱 Mobile navbar open, closing...');
+                    
+                    try {
+                        // Tutup navbar menggunakan Bootstrap collapse
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                        console.log('✅ Navbar collapsed');
+                    } catch (error) {
+                        console.error('❌ Error closing navbar:', error);
+                    }
+                }
+            });
+        });
+        
+        // Event listeners untuk monitoring collapse events
+        navbarCollapse.addEventListener('shown.bs.collapse', function () {
+            console.log('✅ Navbar shown');
+        });
+        
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            console.log('✅ Navbar hidden');
+        });
+        
+        console.log('🎉 Navbar toggle initialized successfully!');
+    });
+    </script>
 </body>
 </html>

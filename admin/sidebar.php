@@ -6,6 +6,6 @@
         <a href="adminberita.php"><i class="bi bi-newspaper"></i> Berita Desa</a>
         <a href="adminumkm.php"><i class="bi bi-briefcase-fill"></i> UMKM desa</a>
         <a href="admindokumen.php"><i class="bi bi-filetype-pdf"></i> Dokumen Desa</a>
-        <a href="../index.php"><i class="bi bi-box-arrow-right"></i> Keluar</a>
+        <a href="logout.php"><i class="bi bi-box-arrow-right"></i> Keluar</a>
     </div>
 </nav>

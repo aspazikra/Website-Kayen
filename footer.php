@@ -27,7 +27,7 @@
             <h3 class="footer-title">Kontak Kami</h3>
             <ul class="footer-contact">
                 <li><i class="fas fa-map-marker-alt"></i> Jl. Raya Kayen No. 123</li>
-                <li><i class="fas fa-phone"></i> (0357) 1234567</li>
+                <li><i class="fas fa-phone"></i> +62 877 5192 3377 </li>
                 <li><i class="fas fa-envelope"></i> info@desakayen.id</li>
                 <li><i class="fas fa-clock"></i> Senin-Jumat: 08.00 - 16.00 WIB</li>
             </ul>

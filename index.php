@@ -123,29 +123,36 @@ $result = $conn->query($sql);
 
     
     <!-- dokumen -->
-     <div class="news-container">
-        <div class="news-header">
-            <h2><i class="fas fa-file-alt"></i> Dokumen Desa</h2>
-            <a href="dokumen.php" class="view-all">Lihat Semua <i class="fas fa-arrow-right"></i></a>
-        </div>
+    <div class="news-container">
+    <div class="news-header">
+        <h2><i class="fas fa-file-pdf" style="color: #e74c3c;"></i> Dokumen Desa</h2>
+        <a href="dokumen.php" class="view-all">Lihat Semua <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="row">
         <?php
         include 'database/koneksi.php';
         $result = $conn->query("SELECT * FROM dokumen_desa ORDER BY tanggal_upload DESC LIMIT 6");
         while ($row = $result->fetch_assoc()) {
+            // Cek ekstensi file untuk menentukan ikon
+            $file_ext = pathinfo($row['file_path'], PATHINFO_EXTENSION);
+            $icon_class = ($file_ext == 'pdf') ? 'fa-file-pdf' : 'fa-file-alt';
+            $icon_color = ($file_ext == 'pdf') ? 'style="color: #e74c3c;"' : 'style="color: #3498db;"';
         ?>
-            <div class="col-md-4">
-                <div class="document-card p-3 mb-3 text-center">
-                    <!-- Ikon dokumen -->
-                    <div class="mb-2">
-                        <i class="fas fa-file-alt fa-3x text-primary"></i>
+            <div class="col-md-4 mb-4">
+                <div class="document-card p-3 text-center h-100" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <!-- Ikon dokumen PDF -->
+                    <div class="mb-3">
+                        <i class="fas <?php echo $icon_class; ?> fa-3x" <?php echo $icon_color; ?>></i>
                     </div>
-                    <h3>
-                        <a href="detail_dokumen.php?id=<?php echo $row['id']; ?>">
+                    <h5 style="min-height: 3rem;">
+                        <a href="detail_dokumen.php?id=<?php echo $row['id']; ?>" style="color: #2c3e50; text-decoration: none;">
                             <?php echo htmlspecialchars($row['judul']); ?>
                         </a>
-                    </h3>
-                    <p><?php echo htmlspecialchars(mb_strimwidth($row['deskripsi'], 0, 80, "...")); ?></p>
-                    <a href="detail_dokumen.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">
+                    </h5>
+                    <p class="text-muted" style="min-height: 3rem;">
+                        <?php echo htmlspecialchars(mb_strimwidth($row['deskripsi'], 0, 80, "...")); ?>
+                    </p>
+                    <a href="detail_dokumen.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">
                         <i class="fas fa-eye"></i> Lihat Dokumen
                     </a>
                 </div>
@@ -155,6 +162,8 @@ $result = $conn->query($sql);
         $conn->close();
         ?>
     </div>
+</div>
+
 
     <!-- UMKM Desa -->
     <div class="news-container">
@@ -241,6 +250,87 @@ $result = $conn->query($sql);
 
         <?php include 'footer.php'; ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS - SUDAH ADA -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+    <!-- ========== TAMBAHKAN SCRIPT INI SETELAH BOOTSTRAP JS ========== -->
+    <script>
+    // Script untuk navbar toggle - TAMBAHKAN INI
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('🔥 Initializing navbar toggle...');
+        
+        // Cek apakah Bootstrap sudah tersedia
+        if (typeof bootstrap === 'undefined') {
+            console.error('❌ Bootstrap JS tidak ditemukan!');
+            return;
+        }
+        
+        // Ambil elemen-elemen navbar
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('#navbarNav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Debug: cek apakah elemen ditemukan
+        console.log('📋 Navbar elements:', {
+            toggler: !!navbarToggler,
+            collapse: !!navbarCollapse,
+            navLinks: navLinks.length
+        });
+        
+        // Pastikan elemen navbar ada
+        if (!navbarToggler || !navbarCollapse) {
+            console.error('❌ Navbar elements tidak ditemukan!');
+            console.log('💡 Pastikan header.php memiliki:');
+            console.log('   - class="navbar-toggler" dengan data-bs-target="#navbarNav"');
+            console.log('   - id="navbarNav" pada div collapse');
+            return;
+        }
+        
+        console.log('✅ Navbar elements found, adding event listeners...');
+        
+        // Event listener untuk toggle button
+        navbarToggler.addEventListener('click', function() {
+            console.log('🔘 Toggle button clicked');
+        });
+        
+        // Auto-close navbar ketika nav-link diklik (khusus mobile)
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                console.log('🔗 Nav link clicked:', this.textContent.trim());
+                
+                // Cek apakah navbar sedang terbuka (expanded)
+                const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+                const isMobile = window.innerWidth < 992; // Bootstrap lg breakpoint
+                
+                if (isExpanded && isMobile) {
+                    console.log('📱 Mobile navbar open, closing...');
+                    
+                    try {
+                        // Tutup navbar menggunakan Bootstrap collapse
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                        console.log('✅ Navbar collapsed');
+                    } catch (error) {
+                        console.error('❌ Error closing navbar:', error);
+                    }
+                }
+            });
+        });
+        
+        // Event listeners untuk monitoring collapse events
+        navbarCollapse.addEventListener('shown.bs.collapse', function () {
+            console.log('✅ Navbar shown');
+        });
+        
+        navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+            console.log('✅ Navbar hidden');
+        });
+        
+        console.log('🎉 Navbar toggle initialized successfully!');
+    });
+    </script>
+
   </body>
 </html>
