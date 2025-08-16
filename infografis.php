@@ -12,7 +12,7 @@
 <body>
     <?php include 'header.php'; ?>
 
-    <div class="desa-profile" style="font-family: 'Poppins', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f8fafc;">
+<div class="desa-profile" style="font-family: 'Poppins', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f8fafc;">
 
   <!-- Header Section -->
   <header style="background: linear-gradient(135deg, #29a3f5 0%, #bdb2ff 100%); padding: 30px; border-radius: 12px; margin-bottom: 30px; color: white; text-align: center;">
@@ -20,167 +20,212 @@
     <p style="font-size: 1.2rem; opacity: 0.9;">Informasi lengkap karakteristik demografi penduduk desa kami</p>
   </header>
 
-<!-- Population Summary -->
-<section style="margin-bottom: 40px;">
-  <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">JUMLAH PENDUDUK</h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-    <!-- Total Penduduk -->
-    <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #3b82f6;">
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Total Penduduk" style="width: 50px; height: 50px; margin-bottom: 10px;">
-      <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">2.769</h3>
-      <p style="color: #64748b;">Total Penduduk</p>
-    </div>
+  <!-- Population Summary -->
+  <section style="margin-bottom: 40px;">
+    <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">JUMLAH PENDUDUK</h2>
     
-    <!-- Kepala Keluarga -->
-    <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #60a5fa;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Kepala Keluarga" style="width: 50px; height: 50px; margin-bottom: 10px;">
-      <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">978</h3>
-      <p style="color: #64748b;">Kepala Keluarga</p>
-    </div>
-    
-    <!-- Laki-laki -->
-    <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #93c5fd;">
-      <img src="https://cdn-icons-png.flaticon.com/512/432/432693.png" alt="Laki-laki" style="width: 50px; height: 50px; margin-bottom: 10px;">
-      <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">1.370</h3>
-      <p style="color: #64748b;">Laki-laki</p>
-    </div>
-    
-    <!-- Perempuan -->
-    <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #bfdbfe;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1154/1154475.png" alt="Perempuan" style="width: 50px; height: 50px; margin-bottom: 10px;">
-      <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">1.399</h3>
-      <p style="color: #64748b;">Perempuan</p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Age Group Section -->
-<section style="margin-bottom: 40px; background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
-  <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">KUALITAS ANGKATAN KERJA</h2>
-  
-  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-    <!-- Chart Section -->
-    <div style="flex: 1 1 350px; min-width: 280px;">
-      <div style="height: auto; background: #f0f9ff; border-radius: 8px; padding: 20px; box-sizing: border-box;">
-        
-        <!-- Legend -->
-        <div style="display: flex; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
-          <div style="display: flex; align-items: center;">
-            <div style="width: 20px; height: 20px; background: #3b82f6; margin-right: 8px; border-radius: 4px;"></div>
-            <span>Laki-laki</span>
-          </div>
-          <div style="display: flex; align-items: center;">
-            <div style="width: 20px; height: 20px; background: #ec4899; margin-right: 8px; border-radius: 4px;"></div>
-            <span>Perempuan</span>
-          </div>
-        </div>
-        
-        <!-- Horizontal bar chart -->
-        <div style="width: 100%; max-width: 100%;">
-          <div style="margin-bottom: 15px;">
-            <div>buta aksara dan huruf/angka latin</div>
-            <div style="display: flex; height: 20px;">
-              <div style="width: 30%; background: #3b82f6;"></div>
-              <div style="width: 25%; background: #ec4899;"></div>
-            </div>
-          </div>
-          
-          <div style="margin-bottom: 15px;">
-            <div>tidak tamat SD</div>
-            <div style="display: flex; height: 20px;">
-              <div style="width: 35%; background: #3b82f6;"></div>
-              <div style="width: 30%; background: #ec4899;"></div>
-            </div>
-          </div>
-          
-          <div style="margin-bottom: 15px;">
-            <div>tamat SD</div>
-            <div style="display: flex; height: 20px;">
-              <div style="width: 60%; background: #3b82f6;"></div>
-              <div style="width: 55%; background: #ec4899;"></div>
-            </div>
-          </div>
-          
-          <div style="margin-bottom: 15px;">
-            <div>tamat SLTP</div>
-            <div style="display: flex; height: 20px;">
-              <div style="width: 70%; background: #3b82f6;"></div>
-              <div style="width: 65%; background: #ec4899;"></div>
-            </div>
-          </div>
-          
-          <div style="margin-bottom: 15px;">
-            <div>tamat SLTA</div>
-            <div style="display: flex; height: 20px;">
-              <div style="width: 85%; background: #3b82f6;"></div>
-              <div style="width: 80%; background: #ec4899;"></div>
-            </div>
-          </div>
-          
-          <div style="margin-bottom: 15px;">
-            <div>tamat Perguruan Tinggi</div>
-            <div style="display: flex; height: 20px;">
-              <div style="width: 45%; background: #3b82f6;"></div>
-              <div style="width: 40%; background: #ec4899;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Summary Section -->
-    <div style="flex: 1 1 300px; min-width: 280px; display: flex; flex-direction: column; gap: 15px;">
-      <div style="background: #eff6ff; padding: 15px; border-radius: 8px;">
-        <h3 style="color: #1e40af; margin-top: 0;">Laki-laki</h3>
-        <p>Tingkat pendidikan tertinggi: <strong>tamat SLTA</strong> dengan <strong>450 orang</strong></p>
-        <p>Tingkat pendidikan terendah: <strong>buta aksara</strong> dengan <strong>50 orang</strong></p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+      <!-- Total Penduduk -->
+      <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #3b82f6;">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Total Penduduk" style="width: 50px; height: 50px; margin-bottom: 10px;">
+        <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">2.769</h3>
+        <p style="color: #64748b;">Total Penduduk</p>
       </div>
       
-      <div style="background: #f0f9ff; padding: 15px; border-radius: 8px;">
-        <h3 style="color: #1e40af; margin-top: 0;">Perempuan</h3>
-        <p>Tingkat pendidikan tertinggi: <strong>tamat SLTA</strong> dengan <strong>400 orang</strong></p>
-        <p>Tingkat pendidikan terendah: <strong>buta aksara</strong> dengan <strong>30 orang</strong></p>
+      <!-- Kepala Keluarga -->
+      <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #60a5fa;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Kepala Keluarga" style="width: 50px; height: 50px; margin-bottom: 10px;">
+        <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">978</h3>
+        <p style="color: #64748b;">Kepala Keluarga</p>
+      </div>
+      
+      <!-- Laki-laki -->
+      <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #93c5fd;">
+        <img src="https://cdn-icons-png.flaticon.com/512/432/432693.png" alt="Laki-laki" style="width: 50px; height: 50px; margin-bottom: 10px;">
+        <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">1.370</h3>
+        <p style="color: #64748b;">Laki-laki</p>
+      </div>
+      
+      <!-- Perempuan -->
+      <div class="stat-card" style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #bfdbfe;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1154/1154475.png" alt="Perempuan" style="width: 50px; height: 50px; margin-bottom: 10px;">
+        <h3 style="color: #3b82f6; font-size: 1.5rem; margin: 10px 0;">1.399</h3>
+        <p style="color: #64748b;">Perempuan</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Age Group Section -->
+  <section style="margin-bottom: 40px; background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box;">
+    <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">KUALITAS ANGKATAN KERJA</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <!-- Chart Section -->
+      <div style="flex: 1 1 350px; min-width: 280px;">
+        <div style="height: auto; background: #f0f9ff; border-radius: 8px; padding: 20px; box-sizing: border-box;">
+          
+          <!-- Legend -->
+          <div style="display: flex; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+            <div style="display: flex; align-items: center;">
+              <div style="width: 20px; height: 20px; background: #3b82f6; margin-right: 8px; border-radius: 4px;"></div>
+              <span>Laki-laki</span>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <div style="width: 20px; height: 20px; background: #ec4899; margin-right: 8px; border-radius: 4px;"></div>
+              <span>Perempuan</span>
+            </div>
+          </div>
+          
+          <!-- Horizontal bar chart -->
+          <div style="width: 100%; max-width: 100%;">
+            <div style="margin-bottom: 15px;">
+              <div>buta aksara dan huruf/angka latin</div>
+              <div style="display: flex; height: 20px;">
+                <div style="width: 30%; background: #3b82f6;"></div>
+                <div style="width: 25%; background: #ec4899;"></div>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <div>tidak tamat SD</div>
+              <div style="display: flex; height: 20px;">
+                <div style="width: 35%; background: #3b82f6;"></div>
+                <div style="width: 30%; background: #ec4899;"></div>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <div>tamat SD</div>
+              <div style="display: flex; height: 20px;">
+                <div style="width: 60%; background: #3b82f6;"></div>
+                <div style="width: 55%; background: #ec4899;"></div>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <div>tamat SLTP</div>
+              <div style="display: flex; height: 20px;">
+                <div style="width: 70%; background: #3b82f6;"></div>
+                <div style="width: 65%; background: #ec4899;"></div>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <div>tamat SLTA</div>
+              <div style="display: flex; height: 20px;">
+                <div style="width: 85%; background: #3b82f6;"></div>
+                <div style="width: 80%; background: #ec4899;"></div>
+              </div>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+              <div>tamat Perguruan Tinggi</div>
+              <div style="display: flex; height: 20px;">
+                <div style="width: 45%; background: #3b82f6;"></div>
+                <div style="width: 40%; background: #ec4899;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Summary Section -->
+      <div style="flex: 1 1 300px; min-width: 280px; display: flex; flex-direction: column; gap: 15px;">
+        <div style="background: #eff6ff; padding: 15px; border-radius: 8px;">
+          <h3 style="color: #1e40af; margin-top: 0;">Laki-laki</h3>
+          <p>Tingkat pendidikan tertinggi: <strong>tamat SLTA</strong> dengan <strong>450 orang</strong></p>
+          <p>Tingkat pendidikan terendah: <strong>buta aksara</strong> dengan <strong>50 orang</strong></p>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px;">
+          <h3 style="color: #1e40af; margin-top: 0;">Perempuan</h3>
+          <p>Tingkat pendidikan tertinggi: <strong>tamat SLTA</strong> dengan <strong>400 orang</strong></p>
+          <p>Tingkat pendidikan terendah: <strong>buta aksara</strong> dengan <strong>30 orang</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Education Section -->
+<section style="margin-bottom: 40px; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+    <h2 style="color: #3b82f6; font-size: 1.6rem; margin: 0; padding-bottom: 8px; border-bottom: 3px solid #bfdbfe; display: inline-block; flex: 1;">
+      <i class="fas fa-graduation-cap" style="margin-right: 10px;"></i>
+      TINGKAT PENDIDIKAN
+    </h2>
+    <div style="background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; white-space: nowrap;">
+      <i class="fas fa-chart-line" style="margin-right: 5px;"></i>
+      Statistik Pendidikan
+    </div>
+  </div>
+  
+  <div style="background: linear-gradient(to right, #f0f9ff, #e0f7fa); border-radius: 10px; padding: 20px; margin-bottom: 20px; border: 1px solid #e0f2fe;">
+    <img src="image/grafik_pendidikan.png" alt="Grafik Tingkat Pendidikan" 
+        style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease;" 
+        onmouseover="this.style.transform='scale(1.02)'" 
+        onmouseout="this.style.transform='scale(1)'" />
+  </div>
+
+  <!-- Key Insights -->
+  <div style="background: #f8fafc; border-left: 4px solid #3b82f6; padding: 15px 20px; border-radius: 0 8px 8px 0; margin-top: 20px;">
+    <h3 style="color: #1e40af; margin-top: 0; font-size: 1.05rem; display: flex; align-items: center;">
+      <i class="fas fa-lightbulb" style="margin-right: 10px; color: #f59e0b;"></i>
+      Analisis Pendidikan
+    </h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+      <div style="flex: 1 1 250px; min-width: 0; transition: transform 0.3s;">
+        <p style="margin: 0; color: #475569; line-height: 1.7; font-size: 0.9rem;">
+          <span style="background: #dbeafe; padding: 2px 6px; border-radius: 4px; font-weight: 500; color: #1e40af; margin-right: 5px;">✓</span>
+          Mayoritas penduduk (<strong>68%</strong>) menamatkan pendidikan hingga <strong>SMA/sederajat</strong>
+        </p>
+        <p style="margin: 10px 0 0; color: #475569; line-height: 1.7; font-size: 0.9rem;">
+          <span style="background: #fce7f3; padding: 2px 6px; border-radius: 4px; font-weight: 500; color: #9d174d; margin-right: 5px;">✓</span>
+          Partisipasi pendidikan perempuan <strong>5% lebih tinggi</strong> dibanding laki-laki
+        </p>
+      </div>
+      <div style="flex: 1 1 250px; min-width: 0; transition: transform 0.3s;">
+        <p style="margin: 0; color: #475569; line-height: 1.7; font-size: 0.9rem;">
+          <span style="background: #ecfdf5; padding: 2px 6px; border-radius: 4px; font-weight: 500; color: #065f46; margin-right: 5px;">✓</span>
+          Hanya <strong>12%</strong> yang mencapai pendidikan <strong>D2 ke atas</strong>
+        </p>
+        <p style="margin: 10px 0 0; color: #475569; line-height: 1.7; font-size: 0.9rem;">
+          <span style="background: #ffedd5; padding: 2px 6px; border-radius: 4px; font-weight: 500; color: #9a3412; margin-right: 5px;">✓</span>
+          Angka putus sekolah tertinggi di jenjang <strong>SMP sederajat</strong>
+        </p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
-  <!-- Education Section -->
-<section style="margin-bottom: 40px; background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-  <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">TINGKAT PENDIDIKAN</h2>
-  
-  <div style="background: #f0f9ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 15px;">
-    <img src="image/grafik_pendidikan.png" alt="Grafik Tingkat Pendidikan" 
-         style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
-  </div>
-</section>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
 
 <!-- Occupation Section -->
-<section style="margin-bottom: 40px;">
-  <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">
-    MATA PENCAHARIAN POKOK
-  </h2>
-  
-  <!-- Chart Image -->
-  <div style="background: #f0f9ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 15px; margin-bottom: 20px;">
-    <img src="image/grafik_pencaharian.png" alt="Grafik Mata Pencaharian Pokok" 
-         style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
-  </div>
+  <section style="margin-bottom: 40px;">
+    <h2 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid #bfdbfe; padding-bottom: 8px;">
+      MATA PENCAHARIAN POKOK
+    </h2>
+    
+    <!-- Chart Image -->
+    <div style="background: #f0f9ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 15px; margin-bottom: 20px;">
+      <img src="image/grafik_pencaharian.png" alt="Grafik Mata Pencaharian Pokok" 
+          style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+    </div>
 
-  <!-- Summary -->
-  <div style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-    <h3 style="color: #1e40af; margin-top: 0;">Ringkasan</h3>
-    <p style="margin: 5px 0;">Total penduduk: <span style="color: #10b981; font-weight: bold;">2.188 orang</span></p>
-    <p style="margin: 5px 0;">Mayoritas pekerjaan: <span style="color: #3b82f6; font-weight: bold;">Petani, Wiraswasta, dan Karyawan Swasta</span></p>
-    <p style="margin: 5px 0;">Perempuan paling banyak bekerja sebagai <span style="color: #ec4899; font-weight: bold;">Karyawan Swasta & Ibu Rumah Tangga</span></p>
-  </div>
-</section>
+    <!-- Summary -->
+    <div style="background: white; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+      <h3 style="color: #1e40af; margin-top: 0;">Ringkasan</h3>
+      <p style="margin: 5px 0;">Total penduduk: <span style="color: #10b981; font-weight: bold;">2.188 orang</span></p>
+      <p style="margin: 5px 0;">Mayoritas pekerjaan: <span style="color: #3b82f6; font-weight: bold;">Petani, Wiraswasta, dan Karyawan Swasta</span></p>
+      <p style="margin: 5px 0;">Perempuan paling banyak bekerja sebagai <span style="color: #ec4899; font-weight: bold;">Karyawan Swasta & Ibu Rumah Tangga</span></p>
+    </div>
+  </section>
 
 
 <!-- Marriage Status -->
